@@ -1,12 +1,14 @@
 [rtree]
 
-NO_OF_DIMS = 4
-NO_OF_SAMPLE_OBJECTS = 5000
+NO_OF_DIMS = 32
+NO_OF_SAMPLE_OBJECTS = 10000
 LOWER = 0
 UPPER = 20
-n = 4
-N = 5000
-M = "math.floor(4096 / (4 * n + 1))"
-m = "math.floor(M / 2)"
+n = 32
+N = 10000
+M = 10
+m = 4
 RTNodeEntryNum = 0
 RTNodeNum = 0
+N_TRIALS = 20
+k = 1

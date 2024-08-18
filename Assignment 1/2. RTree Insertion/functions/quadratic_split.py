@@ -8,8 +8,8 @@ config_path = os.path.join(os.path.dirname(
 config = toml.load(config_path)
 
 n = config['rtree']['n']
-M = eval(config['rtree']['M'])
-m = eval(config['rtree']['m'])
+M = config['rtree']['M']
+m = config['rtree']['m']
 
 def QuadraticSplit(node1, node2, node_entry_ptr):
     assert len(node1.entry) == M

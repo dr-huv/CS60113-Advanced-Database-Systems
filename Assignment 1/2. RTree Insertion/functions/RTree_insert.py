@@ -12,7 +12,7 @@ config_path = os.path.join(os.path.dirname(
 config = toml.load(config_path)
 
 n = config['rtree']['n']
-M = eval(config['rtree']['M'])
+M = config['rtree']['M']
 RTNodeEntryNum = config['rtree']['RTNodeEntryNum']
 RTNodeNum = config['rtree']['RTNodeNum']
 

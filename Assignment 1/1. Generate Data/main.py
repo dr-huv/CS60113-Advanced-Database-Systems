@@ -1,14 +1,16 @@
 import random
 # from constants.data_config import *
-from configparser import ConfigParser
+import os
+import toml
 
-config = ConfigParser()
-config.read('../config/config.ini')
+config_path = os.path.join(os.path.dirname(
+    __file__), '..', 'config', 'config.toml')
+config = toml.load(config_path)
 
-N = int(config['rtree']['NO_OF_SAMPLE_OBJECTS'])
-n = int(config['rtree']['NO_OF_DIMS'])
-LOWER = int(config['rtree']['LOWER'])
-UPPER = int(config['rtree']['UPPER'])
+n = config['rtree']['n']
+N = config['rtree']['N']
+LOWER = config['rtree']['LOWER']
+UPPER = config['rtree']['UPPER']
 
 def gen_data(n, filename):
     with open(filename, "w") as fout:
